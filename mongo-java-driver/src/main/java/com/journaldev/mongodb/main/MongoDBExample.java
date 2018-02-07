@@ -34,6 +34,7 @@ public class MongoDBExample {
 		
 		//read example
 		DBObject query = BasicDBObjectBuilder.start().add("_id", user.getId()).get();
+		//start como select, add como where . get saque todo
 		DBCursor cursor = col.find(query);
 		while(cursor.hasNext()){
 			System.out.println(cursor.next());
@@ -85,3 +86,4 @@ public class MongoDBExample {
 //use NOMBRE_DB
 //show collections
 //db.COLLECTION_NAME.find().pretty()
+//db.COLLECTION_NAME.remove({})
